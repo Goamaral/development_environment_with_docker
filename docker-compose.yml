@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  base:
+    container_name: alpine-base
+    build:
+      dockerfile: docker/development/dockerfile
+      context: .
+    image: alpine_base
+    user: user
+    volumes:
+      - .:/project

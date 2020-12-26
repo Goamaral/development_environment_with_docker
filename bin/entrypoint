@@ -1,0 +1,6 @@
+#! /bin/sh
+if [ ! -f "$HOME/.setup_complete" ]; then
+  touch "$HOME/.setup_complete"
+fi
+
+tail -f /dev/null
