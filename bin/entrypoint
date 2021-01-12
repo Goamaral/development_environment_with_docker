@@ -3,4 +3,6 @@ if [ ! -f "$HOME/.setup_complete" ]; then
   touch "$HOME/.setup_complete"
 fi
 
+npm install
+
 tail -f /dev/null

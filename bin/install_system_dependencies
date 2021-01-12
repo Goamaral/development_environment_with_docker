@@ -1,8 +1,3 @@
 #! /bin/sh
 # General dependencies
 apk add --update bash sudo git openssh
-
-# User setup
-echo "user:x:1000:100::/project/docker/development/home:/bin/bash" >> /etc/passwd
-echo "user ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/user
-chmod 0440 /etc/sudoers.d/user

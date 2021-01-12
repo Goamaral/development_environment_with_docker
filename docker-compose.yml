@@ -2,11 +2,10 @@ version: '3'
 
 services:
   base:
-    container_name: alpine-base
+    container_name: node-base
     build:
       dockerfile: docker/development/dockerfile
       context: .
-    image: alpine_base
-    user: user
+    image: node_base
     volumes:
       - .:/project

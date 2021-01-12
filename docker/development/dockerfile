@@ -1,12 +1,15 @@
-FROM alpine:3.12
+FROM node:15.5-alpine3.11
 
 ENV APP_PATH /project
 ENV APP_BIN_PATH "$APP_PATH/bin"
 ENV PATH "$PATH:$APP_BIN_PATH"
+ENV HOME "$APP_PATH/docker/development/home"
 
 WORKDIR $APP_PATH
 
 COPY ./bin/install_system_dependencies $APP_BIN_PATH/install_system_dependencies
 RUN install_system_dependencies
+
+USER node
 
 ENTRYPOINT [ "entrypoint" ]
